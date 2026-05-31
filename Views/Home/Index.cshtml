@@ -1,8 +1,65 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Panel de Control";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-2 animate-fade-in">
+    <div class="p-5 mb-4 bg-dark text-white rounded-3 shadow">
+        <div class="container-fluid py-3">
+            <h1 class="display-5 fw-bold text-info"><i class="bi bi-terminal-box me-2"></i>Consola de Administración</h1>
+            <p class="col-md-10 fs-5 text-white-50">
+                Bienvenido al sistema frontend de la aplicación. Esta interfaz está completamente optimizada, paquetizada en un entorno multi-etapa y lista para el despliegue continuo.
+            </p>
+            <hr class="my-4 border-secondary">
+            <div class="d-flex align-items-center">
+                <div class="bg-info text-dark rounded-circle p-2 d-inline-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px;">
+                    <i class="bi bi-code-slash fw-bold fs-5"></i>
+                </div>
+                <div>
+                    <span class="text-white-50 d-block small text-uppercase tracking-wider">Ingeniería de Software</span>
+                    <span class="fs-6 fw-semibold text-white">Desarrollado por: <strong class="text-info">Edgar Josué López Arévalo</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-4">
+            <div class="card h-100 border-0 bg-primary bg-gradient text-white shadow-sm rounded-3">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="card-title mb-0 fw-bold">Estado Docker</h5>
+                        <i class="bi bi-box-seam-fill fs-3 text-white-50"></i>
+                    </div>
+                    <p class="card-text small text-white-50">Contenedor multi-stage construido eficientemente a partir de la imagen base de .NET 8 SDK.</p>
+                    <span class="badge bg-white text-primary fw-bold"><i class="bi bi-check2-circle me-1"></i>Dockerfile Listo</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 border-0 bg-success bg-gradient text-white shadow-sm rounded-3">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="card-title mb-0 fw-bold">Máquina Virtual</h5>
+                        <i class="bi bi-server fs-3 text-white-50"></i>
+                    </div>
+                    <p class="card-text small text-white-50">Configurada para el despliegue final mediante clonación de repositorio Git y mapeo de puertos.</p>
+                    <span class="badge bg-white text-success fw-bold"><i class="bi bi-cpu me-1"></i>Listo para VM</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 border-0 text-white shadow-sm rounded-3" style="background: linear-gradient(135deg, #6f42c1, #8951e5);">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="card-title mb-0 fw-bold">Red y Acceso</h5>
+                        <i class="bi bi-globe2 fs-3 text-white-50"></i>
+                    </div>
+                    <p class="card-text small text-white-50">Tráfico de entrada configurado en el puerto HTTP estándar para su fácil exposición pública.</p>
+                    <span class="badge bg-white text-dark fw-bold" style="color: #6f42c1 !important;"><i class="bi bi-link-45deg me-1"></i>Puerto 80:80</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

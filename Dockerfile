@@ -1,39 +1,47 @@
-﻿
-#Usar una imagen oficial de .NET para compilar y publicar
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS Build
+﻿# ==========================================
+# ETAPA 1: Base de ejecución (Runtime ultra ligero)
+# ==========================================
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+# Exponer los puertos estándar internamente
+EXPOSE 80
+EXPOSE 443
+
+# ==========================================
+# ETAPA 2: Restauración de dependencias (Caché de NuGet)
+# ==========================================
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+# Copiar UNICAMENTE el archivo .csproj para congelar las dependencias en la caché de Docker
+COPY ["AplicacionFrontend.csproj", "./"]
+RUN dotnet restore "AplicacionFrontend.csproj" --verbosity detailed
+
+# ==========================================
+# ETAPA 3: Compilación del código fuente
+# ==========================================
+# Si el paso anterior no cambió, Docker saltará directamente aquí sin descargar nada de internet
+COPY . .
+RUN dotnet build "AplicacionFrontend.csproj" -c Release -o /app/build
+
+# ==========================================
+# ETAPA 4: Publicación y optimización de binarios
+# ==========================================
+FROM build AS publish
+RUN dotnet publish "AplicacionFrontend.csproj" -c Release -o /app/publish /p:UseAppHost=false --verbosity detailed
+
+# ==========================================
+# ETAPA 5: Imagen Final limpia (Producción)
+# ==========================================
+FROM base AS final
 WORKDIR /app
 
-#Copiar archivos del proyecto
-COPY . ./
+# Copiar solo el resultado limpio de la publicación (sin código fuente, sin basura de compilación)
+COPY --from=publish /app/publish .
 
-#Restaurar dependencias
-RUN dotnet restore --verbosity detailed
-
-#Compilar y publicar en modo release
-RUN dotnet publish -c Release -o /out --verbosity detailed
-
-#Imagen ligera para ejecucion 
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS Runtime
-WORKDIR /app
-
-#Copiar la salida de la compilacion 
-
-COPY --from=Build /out ./
-
-#Configurar Variables de entorno 
-
+# Variables de entorno profesionales para producción
 ENV ASPNETCORE_ENVIRONMENT=Production
-
 ENV ASPNETCORE_URLS=http://+:80
-
 ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
 
-# Exponer el puerto 80 
-EXPOSE 80:80
-
-# Comando de inicio
-
-
-ENTRYPOINT ["dotnet", "aplicacionFronend.dll"]
-
-
+ENTRYPOINT ["dotnet", "AplicacionFrontend.dll"]
