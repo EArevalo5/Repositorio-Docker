@@ -1,65 +1,154 @@
 ﻿@{
-    ViewData["Title"] = "Panel de Control";
+    ViewData["Title"] = "Inicio - DevOps con Contenedores";
 }
 
-<div class="container mt-2 animate-fade-in">
-    <div class="p-5 mb-4 bg-dark text-white rounded-3 shadow">
-        <div class="container-fluid py-3">
-            <h1 class="display-5 fw-bold text-info"><i class="bi bi-terminal-box me-2"></i>Consola de Administración</h1>
-            <p class="col-md-10 fs-5 text-white-50">
-                Bienvenido al sistema frontend de la aplicación. Esta interfaz está completamente optimizada, paquetizada en un entorno multi-etapa y lista para el despliegue continuo.
+<div class="container py-4 animate-fade-in" style="max-width: 900px;">
+
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden bg-white mb-4">
+        <div class="card-body p-5">
+
+            <div class="mb-3">
+                <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2 fw-semibold">
+                    🚀 Proyecto MVC ASP.NET Core & DevOps
+                </span>
+            </div>
+
+            <h1 class="display-4 fw-bold text-dark mb-3">
+                Bienvenido a <span class="text-primary bg-gradient">DevOps Azure</span>
+            </h1>
+
+            <p class="text-secondary fs-5 lh-base mb-4" style="max-width: 750px;">
+                Sitio web desarrollado bajo el patrón arquitectónico MVC, aplicando un empaquetado multi-etapa optimizado. Preparado para la integración y el despliegue continuo (CI/CD) en la nube de Microsoft Azure.
             </p>
-            <hr class="my-4 border-secondary">
-            <div class="d-flex align-items-center">
-                <div class="bg-info text-dark rounded-circle p-2 d-inline-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px;">
-                    <i class="bi bi-code-slash fw-bold fs-5"></i>
+
+            <div class="d-flex flex-wrap gap-2 mb-4">
+                <a href="https://github.com/EArevalo5/Repositorio-Docker.git" target="_blank" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold shadow-sm">
+                    <i class="bi bi-github me-2"></i>Ver Repositorio
+                </a>
+                <a href="https://learn.microsoft.com/azure" target="_blank" class="btn btn-outline-secondary rounded-pill px-4 py-2 fw-semibold">
+                    <i class="bi bi-cloud-fill me-2"></i>Documentación Azure
+                </a>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 border-top pt-4 mb-2">
+                <span class="badge bg-light text-success border border-success-subtle rounded-3 px-3 py-2">
+                    <i class="bi bi-check-circle-fill me-1"></i> ASP.NET Core MVC
+                </span>
+                <span class="badge bg-light text-success border border-success-subtle rounded-3 px-3 py-2">
+                    <i class="bi bi-check-circle-fill me-1"></i> Multi-Stage Dockerfile
+                </span>
+                <span class="badge bg-light text-success border border-success-subtle rounded-3 px-3 py-2">
+                    <i class="bi bi-check-circle-fill me-1"></i> Diseño Responsivo
+                </span>
+                <span class="badge bg-light text-success border border-success-subtle rounded-3 px-3 py-2">
+                    <i class="bi bi-check-circle-fill me-1"></i> Cloud Ready (Azure)
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card border-0 shadow-sm rounded-4 bg-dark text-white p-4 mb-4" style="background: linear-gradient(135deg, #1e1e24, #0f1115);">
+        <div class="card-body">
+            <div class="d-flex align-items-center mb-4">
+                <div class="bg-primary text-white rounded-circle p-2 d-inline-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                    <i class="bi bi-people-fill"></i>
                 </div>
                 <div>
-                    <span class="text-white-50 d-block small text-uppercase tracking-wider">Ingeniería de Software</span>
-                    <span class="fs-6 fw-semibold text-white">Desarrollado por: <strong class="text-info">Edgar Josué López Arévalo</strong></span>
+                    <h5 class="mb-0 fw-bold">Equipo de Ingeniería de Software</h5>
+                    <small class="text-muted text-uppercase tracking-wider">Desarrolladores principales</small>
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="p-3 rounded-3 bg-secondary bg-opacity-10 border border-secondary border-opacity-25">
+                        <span class="text-primary d-block small fw-semibold mb-1"><i class="bi bi-code-slash"></i> Dev 1</span>
+                        <h6 class="mb-0 fw-bold text-white">Edgar Josué López Arévalo</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 rounded-3 bg-secondary bg-opacity-10 border border-secondary border-opacity-25">
+                        <span class="text-primary d-block small fw-semibold mb-1"><i class="bi bi-terminal"></i> Dev 2</span>
+                        <h6 class="mb-0 fw-bold text-white">Elmer Leonel De la Cruz Fuentes</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 rounded-3 bg-secondary bg-opacity-10 border border-secondary border-opacity-25">
+                        <span class="text-primary d-block small fw-semibold mb-1"><i class="bi bi-layers"></i> Dev 3</span>
+                        <h6 class="mb-0 fw-bold text-white">David Estuardo Cruz Garcia</h6>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="row g-4 mb-4">
+    <div class="row g-3">
         <div class="col-md-4">
-            <div class="card h-100 border-0 bg-primary bg-gradient text-white shadow-sm rounded-3">
-                <div class="card-body p-4">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h5 class="card-title mb-0 fw-bold">Estado Docker</h5>
-                        <i class="bi bi-box-seam-fill fs-3 text-white-50"></i>
+            <div class="card h-100 border-0 shadow-sm rounded-4 bg-white p-3">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="bg-primary-subtle text-primary rounded-3 p-2 fs-4"><i class="bi bi-box-seam"></i></div>
+                    <div>
+                        <small class="text-muted d-block">Docker status</small>
+                        <strong class="text-dark">Dockerfile Configurado</strong>
                     </div>
-                    <p class="card-text small text-white-50">Contenedor multi-stage construido eficientemente a partir de la imagen base de .NET 8 SDK.</p>
-                    <span class="badge bg-white text-primary fw-bold"><i class="bi bi-check2-circle me-1"></i>Dockerfile Listo</span>
                 </div>
             </div>
         </div>
-
         <div class="col-md-4">
-            <div class="card h-100 border-0 bg-success bg-gradient text-white shadow-sm rounded-3">
-                <div class="card-body p-4">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h5 class="card-title mb-0 fw-bold">Máquina Virtual</h5>
-                        <i class="bi bi-server fs-3 text-white-50"></i>
+            <div class="card h-100 border-0 shadow-sm rounded-4 bg-white p-3">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="bg-success-subtle text-success rounded-3 p-2 fs-4"><i class="bi bi-cloud-arrow-up"></i></div>
+                    <div>
+                        <small class="text-muted d-block">Destino Cloud</small>
+                        <strong class="text-dark">Listo para Azure</strong>
                     </div>
-                    <p class="card-text small text-white-50">Configurada para el despliegue final mediante clonación de repositorio Git y mapeo de puertos.</p>
-                    <span class="badge bg-white text-success fw-bold"><i class="bi bi-cpu me-1"></i>Listo para VM</span>
                 </div>
             </div>
         </div>
-
         <div class="col-md-4">
-            <div class="card h-100 border-0 text-white shadow-sm rounded-3" style="background: linear-gradient(135deg, #6f42c1, #8951e5);">
-                <div class="card-body p-4">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h5 class="card-title mb-0 fw-bold">Red y Acceso</h5>
-                        <i class="bi bi-globe2 fs-3 text-white-50"></i>
+            <div class="card h-100 border-0 shadow-sm rounded-4 bg-white p-3">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="bg-warning-subtle text-warning rounded-3 p-2 fs-4"><i class="bi bi-hdd-network"></i></div>
+                    <div>
+                        <small class="text-muted d-block">Mapeo de Red</small>
+                        <strong class="text-dark">Puerto Local 8080</strong>
                     </div>
-                    <p class="card-text small text-white-50">Tráfico de entrada configurado en el puerto HTTP estándar para su fácil exposición pública.</p>
-                    <span class="badge bg-white text-dark fw-bold" style="color: #6f42c1 !important;"><i class="bi bi-link-45deg me-1"></i>Puerto 80:80</span>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
+
+<style>
+    .bg-primary-subtle {
+        background-color: #e0eeff !important;
+    }
+
+    .bg-success-subtle {
+        background-color: #e1f7ec !important;
+    }
+
+    .bg-warning-subtle {
+        background-color: #fff3cd !important;
+    }
+
+    .rounded-4 {
+        border-radius: 1rem !important;
+    }
+
+    .text-primary {
+        color: #0078d4 !important;
+    }
+
+    .btn-primary {
+        background-color: #0078d4 !important;
+        border-color: #0078d4 !important;
+    }
+
+        .btn-primary:hover {
+            background-color: #005a9e !important;
+            border-color: #005a9e !important;
+        }
+</style>

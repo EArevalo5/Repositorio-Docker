@@ -44,9 +44,9 @@
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\edgar\\source\\repos\\AplicacionFrontend\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAADwvzYAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAuwI8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-31T21:33:16.295Z",
+              "WhenOpened": "2026-06-06T21:00:27.424Z",
               "EditorCaption": ""
             },
             {
@@ -72,8 +72,7 @@
               "RelativeToolTip": "Dockerfile",
               "ViewState": "AgIAABwAAAAAAAAAAAAkwC4AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-31T21:25:47.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-31T21:25:47.553Z"
             }
           ]
         }
